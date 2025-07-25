@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+section {
+    background-color: #3eb6bd;
+}
+
+h1 {
+    color: #ffffff;
+
+}
+
+em {
+    font-weight: bold;
+}
