@@ -25,6 +25,8 @@ p {
 img {
     /* width…要素の幅 */
     width: 300px;
+    height: 100px;
+    object-fit: cover;
 }
 
 /* 画像の幅の指定の単位
