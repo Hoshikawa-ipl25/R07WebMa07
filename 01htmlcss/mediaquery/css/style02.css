@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+    background-color: #eeaadd;
+}
+
+/* メディアクエリの指定を、等号・不等号で書く方法 */
+
+/* 画面が480px未満 */
+/* （480pxのスマホだと、ここには入らないことに注意） */
+@media screen and (width < 480px) {
+    body {
+        background-color: #ffcc00;
+    }
+}
+
+
+/* 画面が960pxより大きい */
+@media screen and (960px < width) {
+    body {
+        background-color: #00ff33;
+    }
+}
+
+/* 画面幅が480px以上かつ959px以下の時 */
+@media screen and (480px <=width <=960px) {
+    body {
+        background-color: #00ffff;
+
+    }
+}

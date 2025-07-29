@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+    /* 初期設定の背景色をピンクにしてあります */
+    /* 下記の記述が全部書き終わると、ピンク色の背景は出てこなくなるはず */
+    /* （でしたが、幅が480.2ピクセルなど、小数点の幅の時には表示されるみたい） */
+    background-color: #eeaadd;
+}
+
+/* 画面が480px以下の幅の時のメディアクエリ */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: #ffcc00;
+    }
+}
+
+/* 画面が960以上の幅の時のメディアクエリ */
+@media screen and (min-width: 960px) {
+    body {
+        background-color: #00ff33;
+    }
+}
+
+/* 画面幅が481px以上かつ959px以下の時 */
+@media screen and (min-width:481px) and (max-width:959px) {
+    body {
+        background-color: #00ffff;
+
+    }
+}
