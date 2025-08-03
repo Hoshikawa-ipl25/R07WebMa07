@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* 全体の設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin: 40px auto 0;
+    border: 1px dashed #ccc;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+/* dlタグ内の設定 */
+
+/* flexBoxになる親要素 */
+.flex-container {
+    display: flex;
+    /* ↓この要素の中にはいっている子要素たちが、どういうルールで並ぶか */
+    justify-content: space-around;
+}
+
+/* flexboxで横並びなどになる子要素 */
+.flex-item {
+    background: #09b;
+    color: #fff;
+    padding: 1em;
+    /* ↓flexアイテムの子要素の幅 */
+    flex-basis: 30%;
+}
+
+.flex-item dt {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* レスポンシブ設定 */
+@media screen and (max-width:768px) {
+    h2 {
+        font-size: 1.1em
+    }
+
+    .flex-container {
+        /* ↓column→列→縦並び、という意味 */
+        flex-direction: column;
+    }
+
+    .flex-item {
+        margin: 0 1em 1em;
+    }
+}

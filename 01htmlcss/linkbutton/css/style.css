@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/*  
+* {
+    background: #000;
+　　↑cssのファイルがリンクできているかの確認用に、背景色を試しに設定した痕跡
+} 
+*/
+
+a {
+    display: block;
+    /* ↑ブロックレベル要素に切り替えています。教科書P.71 */
+    width: 200px;
+
+    /* marginは枠線（border）から外側の余白設定 */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    /* ↓ ショートハンド記述の場合: 上下の幅 左右の幅; 教科書P.73 */
+    /* margin: 40px auto; */
+
+    /* paddingは枠線から中身のコンテンツまでの内側の余白 */
+    padding: 1em;
+
+    /* 文字列を中央ぞろえ */
+    text-align: center;
+}
+
+a.text-link {
+    color: #008000;
+    text-decoration: underline;
+    /* テキストデコレーション：下線をつけたりなくしたり、dottedなどで波線を設定するなども */
+
+    /* borderジェネレータ：どんな枠線をつくれるか確認したり作ったりしてみましょう*/
+    /* https://front-end-tools.com/generateBorder/ */
+
+}
+
+a.button-link {
+    background-color: #ffd700;
+    text-decoration: none;
+    color: #ff4500;
+    font-size: 20px;
+}
+
+a.button-link2 {
+    background-color: #1e90ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid #191970;
+}
+
+a.button-link2:active {
+    border-bottom: none;
+    transform: translateY(4px);
+    /* Y軸方向に４ｐｘ”下へ”ずらしている */
+}
+
+@media screen and (width>=960px) {
+    a:hover {
+        opacity: 0.7;
+        /* opacityは透明度を１～０の間の数値で設定。0.7は透明度７０％になります。 */
+    }
+
+}
