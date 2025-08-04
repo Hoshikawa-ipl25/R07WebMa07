@@ -10,3 +10,31 @@
     height: 500px;
     background: #98807b url(../img/bg-cat.png) center bottom no-repeat;
 }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section div {
+    width: 48vw;
+    height: 48vh;
+    border: 1px solid #ccc;
+    background: url("../img/bg-cat-light.png") right bottom no-repeat;
+}
+
+.px {
+    background-size: 150px 50px;
+}
+
+.per {
+    background-size: 50% 50%;
+}
+
+.cover {
+    background-size: cover;
+}
+
+.contain {
+    background-size: contain;
+}

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-hero {
+    background: url("../img/bg-hero-sp.jpg") center bottom no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.bg-info {
+    padding: 20% 7% 0;
+    color: #fff;
+}
+
+.bg-hero h1 {
+    text-align: center;
+    margin-bottom: 0.75em;
+    font-size: 1.625rem;
+}
+
+.bg-hero p {
+    line-height: 1.8;
+    font-size: 0.875rem;
+}
+
+@media screen and (min-width:600px) {
+    .bg-hero {
+        background-image: url(../img/bg-hero-pc.jpg);
+    }
+
+    .bg-info {
+        padding: 10% 18%;
+    }
+
+    .bg-hero h1 {
+        font-size: 1.875rem;
+    }
+
+}
+
+@media screen and (min-width:960px) {
+    .bg-hero {
+        position: relative;
+    }
+
+    .bg-info {
+        padding: 0;
+        width: 40%;
+        position: absolute;
+        top: 20%;
+        left: 120px;
+    }
+
+    .bg-hero h1 {
+        text-align: left;
+    }
+
+    .bg-info {
+        font-size: 1rem;
+    }
+}
