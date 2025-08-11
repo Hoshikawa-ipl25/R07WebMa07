@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+div {
+    height: 300px;
+    align-content: center;
+}
+
+p {
+    align-content: center;
+}
+
+/* ブロックレベル要素に「align-content」で縦位置を設定する方法は、2024年からブラウザ対応され始めた機能です。 本来は、flexboxやGridレイアウトの使用時の要素に対して使える機能でした。 */
+/* ですので、今はまだ古めのブラウザでは意図した表示にならない、などが起こりえますので、実際に使うにはまだ早い書き方なのかな…という面もあるものでした。ので、ご紹介までということで。 */
+
+/* 参考サイト：Coliss - Chrome 123で、divなどのブロック要素で垂直方向の中央にalign-contentプロパティで配置できるようになります
+https: //coliss.com/articles/build-websites/operation/css/chrome-123-support-for-align-content.html */

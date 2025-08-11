@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* 全体設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 共通設定 */
+div {
+    width: 100%;
+    padding: 1em;
+    background: #eee;
+}
+
+p {
+    width: 200px;
+    height: 200px;
+    background: #00c;
+    color: #fff;
+
+    /* ↓ブロックレベルの左右の中央寄せ */
+    margin-inline: auto;
+
+    /* ↓インライン性質の左右の中央寄せ */
+    /* （寄せたい文字の親要素に指定） */
+    text-align: center;
+}

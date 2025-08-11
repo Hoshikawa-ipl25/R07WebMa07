@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+section {
+    margin: 0;
+    padding: 10px;
+    width: 240px;
+    background: #ccf;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    color: #779;
+}
+
+/* potisonやz-index、topやleftの数値、設定を変えると
+どう画像の配置が変わっていく仕組みになっているか
+いろいろ試して調べてみましょう。 */
+
+img.cat01 {
+    display: block;
+    width: 240px;
+    position: relative;
+    top: 60px;
+    left: 100px;
+
+    /* ↓重なり順を指定  */
+    z-index: 50;
+}
+
+img.cat02 {
+    display: block;
+    width: 240px;
+    position: absolute;
+    /* ↓重なり順を指定  */
+    z-index: 20;
+}

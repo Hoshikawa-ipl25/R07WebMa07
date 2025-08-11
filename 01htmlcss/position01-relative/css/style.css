@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+section {
+    margin: 0;
+    padding: 10px;
+    width: 240px;
+    background: #ccf;
+}
+
+h1 {
+    margin: 0;
+    color: #779;
+}
+
+img {
+    display: block;
+    width: 240px;
+
+    /* position: relative;を設定して、位置をずらせる状態にする */
+    position: relative;
+    /* topかbottom、leftかrightを指定し、位置を微調整できる */
+    top: 60px;
+    left: 100px;
+}

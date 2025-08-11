@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ↓追記：リストタグの先頭の・を消す */
+ul {
+    list-style: none;
+}
+
+.gnav-wrap {
+    background-color: #1b9aaa;
+}
+
+.gnav-inner {
+    margin-inline: auto;
+    padding: 0.5em 1.5em;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b9aaa;
+}
+
+.gnav-logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+.gnav-list {
+    text-align: center;
+    background: #1b9aaa;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+}
+
+.gnav-list li a {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.gnav-list li span {
+    font-size: 12px;
+    display: block;
+}

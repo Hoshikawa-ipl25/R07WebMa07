@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+section {
+    margin: 0;
+    padding: 10px;
+    width: 240px;
+    background: #ccf;
+}
+
+h1 {
+    margin: 0;
+    color: #779;
+}
+
+/* imgの親要素であるsectionに、relativeを指定することで、 その中のabusoluteな要素の位置を決めるときの基準点とすることができる */
+section {
+    position: relative;
+}
+
+
+img {
+    display: block;
+    width: 240px;
+
+    /* absoluteを指定すると、レイヤー１枚分手前に要素が浮いてくれ、位置を決められる。 */
+    /* 親要素の中身はいなくなり、高さ（height）を指定していない場合はその分縮む。 */
+    position: absolute;
+    top: 60px;
+    left: 100px;
+}

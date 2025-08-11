@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Googleフォントの設定</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Googleフォントの読み込みをHTMLのheadタグ内で読むこむ方法 -->
+    <!-- ここから -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Playwrite+PL&display=swap"
+        rel="stylesheet">
+    <!-- ここまで -->
+
+    <!-- Googleフォント、１回ずつフォントのコードをもらってきた時は
+    上の２行は共通なので
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    それと、毎回のフォントのファイルの読み込みの部分だけを追記していく、という形でも
+    読み込みをさせていく事は可能
+
+    ↓英文のフォントだけ読み込み  
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+PL&display=swap" rel="stylesheet">
+
+    ↓和文フォントだけ読み込み
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    というような記述でもOK
+    -->
+</head>
+
+<body>
+    <h2>英文フォント</h2>
+    <p class="en-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+    <h2>日本語フォント</h2>
+    <p class="jp-font">
+        親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に
+    </p>
+    <h2>日英混合</h2>
+    <p class="mix-font">ザネリもね、ずいぶん走ったけれどもやっぱりジョバンニたちとわかれたくないような気がして、He quietly took out a small piece of paper from his
+        hiding place.</p>
+
+</body>
+
+</html>
