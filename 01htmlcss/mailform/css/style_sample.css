@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* 12日に追記した分を、8日に書いたセレクタの中に書き直したCSS */
+
 
 * {
     margin: 0;
@@ -45,6 +47,7 @@ dd {
     width: 300px;
 }
 
+
 input[type='text'],
 input[type='email'],
 select,
@@ -52,39 +55,19 @@ textarea {
     display: block;
     width: 100%;
     font-size: 16px;
+
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 0.3em;
+}
+
+select {
+    height: 2em;
 }
 
 .form-submit {
     text-align: center;
 }
-
-/* モバイル用CSS */
-@media screen and (max-width: 768px) {
-    form {
-        padding: 20px 0;
-    }
-
-    dl {
-        width: 90%;
-    }
-
-    .form-item {
-        display: block;
-    }
-
-    dt {
-        width: 100%;
-    }
-
-    dd {
-        width: 100%;
-    }
-}
-
-/*====== max-width:768px ここまで ======*/
-
-
-/* 8月12日追記分　ここから下 */
 
 dt,
 dd,
@@ -100,22 +83,6 @@ dt::before {
     padding-right: 6px;
 }
 
-/* 
-以下のセレクタは8月8日に記述内にもあるので
-その下に追記をしていくのが本来正しい書き方かもです
- */
-input[type='text'],
-input[type='email'],
-select,
-textarea {
-    border: 1px solid #ccc;
-    background: #fff;
-    padding: 0.3em;
-}
-
-select {
-    height: 2em;
-}
 
 .label-radio {
     margin-right: 2em;
@@ -150,10 +117,26 @@ input[type='submit'] {
 }
 
 /* モバイル用CSS */
-/* ここのメディアクエリも、中身だけ前回のCSSの下に追記でよい */
 @media screen and (max-width: 768px) {
+    form {
+        padding: 20px 0;
+    }
+
+    dl {
+        width: 90%;
+    }
+
+    .form-item {
+        display: block;
+    }
+
     dt {
+        width: 100%;
         margin-bottom: 10px;
+    }
+
+    dd {
+        width: 100%;
     }
 
     input[type='submit'] {
