@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+
+div {
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+    margin: 2em 2em 4em;
+}
+
+.sample1 {
+    animation: zigzag 2s ease 0s 3 normal;
+    background: #ad4444;
+}
+
+@keyframes zigzag {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(50px, 50px);
+    }
+
+    100% {
+        transform: translate(100px, 0px);
+    }
+}
+
+
+.sample2 {
+    animation: scale-and-color 4s linear 0s infinite alternate;
+}
+
+@keyframes scale-and-color {
+    0% {
+        background: #ad4444;
+        transform: scale(1);
+    }
+
+    50% {
+        background: #3946ad;
+
+        transform: scale(1.5);
+    }
+
+    100% {
+        background: #4dad48;
+
+        transform: scale(1);
+    }
+}
+
+img {
+    width: 100px;
+    margin-right: 2em;
+}
+
+.sample3 {
+    animation: lording 1s linear 0s infinite;
+}
+
+@keyframes lording {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sample4 {
+    animation: heart 0.8s ease 0s infinite normal;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+    }
+
+    8% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

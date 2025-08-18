@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+div {
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+    margin: 2em 2em 4em;
+    background: #3e95a4;
+    color: #fff;
+}
+
+.width {
+    transition: width 0.5s ease-out 0s;
+    /* transitionのあとに並べられる項目 */
+    /* ｜プロパティ名｜再生時間｜イージング関数｜振る舞い｜待ち時間 */
+    /* イージング関数について→ https://ics.media/entry/18730/ */
+}
+
+.width:hover {
+    width: 400px;
+}
+
+.circle {
+    transition: border-radius 0.2s;
+}
+
+.circle:hover {
+    border-radius: 50%;
+}
+
+.scale {
+    transition: transform 0.5s ease-in-out 1s;
+}
+
+.scale:hover {
+    transform: scale(1.5);
+}
