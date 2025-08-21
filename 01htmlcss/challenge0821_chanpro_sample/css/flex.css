@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+ul {
+    display: flex;
+    /* gap: 5%; */
+    flex-wrap: wrap;
+
+}
+
+li {
+    max-width: 360px;
+    /* margin-bottom: 24px; */
+}
