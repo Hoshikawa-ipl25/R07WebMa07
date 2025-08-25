@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, san-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+}
+
+img {
+    display: block;
+}
+
+/* ヘッダー・メインビジュアル */
+header img {
+    width: 200px;
+    height: auto;
+    margin-inline: auto;
+    /* margin: 0 auto; */
+
+}
+
+.mainvisual img {
+    width: 100%;
+}
+
+/* セクション共通部分 */
+section {
+    width: 100%;
+    /* background: #ff0033;チェック用背景色 */
+    padding: 40px 0 60px;
+}
+
+/* 各セクション */
+section:nth-of-type(1) {
+    background-color: #a68072;
+}
+
+section:nth-of-type(2) {
+    background-color: #6889a6;
+}
+
+section:nth-of-type(3) {
+    background-color: #010d26;
+}
+
+section:nth-of-type(4) {
+    background-color: #624a3b;
+}
+
+.inner {
+    width: 70%;
+    margin-inline: auto;
+}
+
+h2 {
+    margin-bottom: 30px;
+    border-bottom: 4px solid #fff;
+    /* display: inline-block; */
+    /* ↑文字列とその下につくボーダー線が同じ幅にしたい時はinline-block性質を活用したりできます */
+}
+
+/* 番号付きリスト */
+ol li {
+    margin-bottom: 10px;
+}
+
+/* テーブル */
+table {
+    width: 80%;
+    margin-inline: auto;
+    background: #fff;
+    /* border: 10px solid #6889a6; */
+    /* ↑<table>タグにborderを付けた場合は、表の一番外側にだけの枠線への指定となります */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 1em;
+    border: 1px solid #3d5a6d;
+}
+
+th {
+    background-color: #687c9f;
+}
+
+td {
+    color: #222;
+}
+
+/* フォーム */
+form {
+    width: 80%;
+    margin-inline: auto;
+}
+
+form dt {
+    margin-bottom: 20px;
+}
+
+form dt::before {
+    content: "◆";
+    margin-right: 10px;
+}
+
+
+form dd {
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+
+input {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1.1em;
+    border: none;
+}
+
+/* 教科書のままのソースコードでもいいのですが…
+↑入力欄のHTMLを「氏名」は type=text、メールアドレスは type=email にしたので
+input のセレクタでどちらにも適用されるCSSを書いています。 */
+/* HTML側で、氏名の欄もメアドの欄も type=text にしてある場合は
+セレクタは input[type="text"] にしても適用されるかなと思います。 */
+
+
+input[type="radio"] {
+    width: 1em;
+    /* ↑ラジオボタンが置いてあるブロックの横幅の設定でした */
+    margin-right: 4px;
+    margin-left: 24px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 70%;
+    padding: 20px;
+
+    /* margin: 40px 0 auto; */
+    /* ↑この記述と下の４行は同義 */
+    margin-top: 40px;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: #ff8124;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* プロモーション画像 */
+.promotion img {
+    width: 100%;
+}
+
+footer {
+    padding: 30px;
+    color: #666;
+    text-align: center;
+    /* ↑footerの中にいる<address><small>タグはどちらもインライン要素なので、
+    text-alignで文字列の揃えを指定できる */
+    font-size: 0.9em;
+}
+
+address {
+    /* font-style: normal; */
+    margin-bottom: 10px;
+}
