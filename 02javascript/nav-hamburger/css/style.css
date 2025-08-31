@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ↓追記：リストタグの先頭の・を消す */
+ul {
+    list-style: none;
+}
+
+.gnav-wrap {
+    background-color: #1b9aaa;
+}
+
+.gnav-inner {
+    margin-inline: auto;
+    padding: 0.5em 1.5em;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b9aaa;
+}
+
+.gnav-logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+.gnav-list {
+    text-align: center;
+    background: #1b9aaa;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+}
+
+.gnav-list li a {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.gnav-list li span {
+    font-size: 12px;
+    display: block;
+}
+
+/* ハンバーガーメニュー追加CSS ここから */
+.gnav-button {
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+
+    .gnav-button {
+        display: block;
+        cursor: pointer;
+        /* z-index: 200; */
+    }
+
+    .gnav-list {
+        /* background-color: aquamarine; */
+        position: fixed;
+        padding-top: 10vh;
+        top: 0;
+        left: -100%;
+        /* left: 0; */
+        z-index: 100;
+        width: 100%;
+        max-width: 240px;
+        height: 100vh;
+        flex-direction: column;
+        transition: 0.3s;
+    }
+
+    .is-open .gnav-list {
+        left: 0;
+    }
+
+    /* ボタン本体の調整 */
+    .gnav-button {
+        height: 50px;
+        width: 60px;
+        background-color: transparent;
+        border: none;
+        position: relative;
+    }
+
+    .gnav-button span {
+        font-weight: bold;
+        color: #fff;
+        position: absolute;
+        width: 60px;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* ボタンの線 */
+    .gnav-button::before,
+    .gnav-button::after,
+    .gnav-button span::before {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+    }
+
+    /* 一番上の線 */
+    .gnav-button::before {
+        top: 8px;
+    }
+
+    /* 一番下の線 */
+    .gnav-button::after {
+        top: 24px;
+    }
+
+    /* 真ん中の線 */
+    .gnav-button span::before {
+        top: -14px;
+    }
+
+    /* アイコンのアニメーション */
+    .is-open .gnav-button::before {
+        transform: rotate(45deg);
+        top: 16px;
+        left: 16px;
+    }
+
+    .is-open .gnav-button::after {
+        transform: rotate(-45deg);
+        top: 16px;
+        left: 16px;
+    }
+
+    .is-open .gnav-button span::before {
+        background-color: transparent;
+    }
+
+}
+
+/*====== max-width:800px ここまで ======*/
