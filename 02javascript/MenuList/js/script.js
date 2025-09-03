@@ -1,33 +1,55 @@
-//P.175～「オブジェクト」の仕組みを確認中
-//配列の箱に、インデックス番号じゃなくて、名前（キー）をつけ、中身（値）を入れていける
-
+//P.194～196「オブジェクト」の記述をスッキリさせる
 
 //#menuの<div>要素を代入
 const menu = document.querySelector('#menu');
 
-const strawberry = {
-  name: 'イチゴ', // 「キー」:「値」, の組み合わせで１セット（プロパティ）
-  img: 'strawberry.jpg',
-  price: '450',
-};
-
-const key = 'name';
-console.log(strawberry.name);
-console.log(strawberry[key]);
-
+// オブジェクトが入った配列を設定
 const lists = [
-  'strawberry.jpg',
-  'lime.jpg',
-  'mango.jpg',
-  'lemon.jpg',
-  'fig.jpg',
-  'apple.jpg',
+  {
+    name: 'イチゴ',
+    img: 'strawberry.jpg',
+    price: '450',
+  },
+  {
+    name: 'ライム',
+    img: 'lime.jpg',
+    price: '400',
+  },
+  {
+    name: 'マンゴー',
+    img: 'mango.jpg',
+    price: '500',
+  },
+  {
+    name: 'レモン',
+    img: 'lemon.jpg',
+    price: '400',
+  },
+  {
+    name: 'イチジク',
+    img: 'fig.jpg',
+    price: '500',
+  },
+  {
+    name: 'リンゴ',
+    img: 'apple.jpg',
+    price: '400',
+  },
 ];
 
 
 //for文でHTMLを出力 lists.length には、要素の個数が入っている
 for (let i = 0; i < lists.length; i++) {
-  const content = `<div><img src="images/${lists[i]}" alt=""></div>`;
+
+  // 呼んだオブジェクトのプロパティを一旦定数に格納すると見やすく
+  // const name = lists[i].name;
+  // const img = lists[i].img;
+  // const price = lists[i].price;
+
+  // ↑これを、分割代入で記述↓
+  const { name, img, price } = lists[i];
+
+  const content = `<div><img src="images/${img}" alt=""><h2>${name}</h2><p>${price}円</p></div>`;
   menu.insertAdjacentHTML('beforeend', content);
 
 }
