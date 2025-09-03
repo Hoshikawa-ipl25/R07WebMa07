@@ -1,20 +1,17 @@
-// 見出しをアニメーションさせる（色が変化）
+// 見出しをアニメーション(下からだんだんでてくる)
 const heading = document.querySelector('#heading');
 
 const keyframes = {
-  // opacity: [0, 1],
-  // translate: ['0px 50px', 0],
-  // rotate: ['x 720deg', 0],
-  color: ['#f66', '#fc2', '#0c6', '#0bd'],
+  opacity: [0, 1],
+  translate: ['0px 50px', 0],
 }
 
 const options = {
   //アニメーションの動きの詳細をここに記述
-  duration: 5000,
+  duration: 2000,
   easing: 'ease',
-  // fill: 'forwards',
-  direction: 'alternate',
-  iterations: Infinity,
+  // direction: 'reverse',
+  // iterations: Infinity,
 
 };
 
