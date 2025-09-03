@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body {
+  text-align: center;
+}
+
+/* 背景色が横から延びる時の見出しのCSS */
+h1 {
+  color: #ffffff;
+  display: inline-block;
+  background-image: linear-gradient(90deg, #0bd, #0bd 50%, #fff 50%, #fff);
+  background-size: 200% 100%;
+  padding: .5rem 1rem;
+}
+
+
+/* CSSのグラデーションの使い方解説記事 */
+/* https://saruwakakun.com/html-css/basic/linear-radial-gradient */

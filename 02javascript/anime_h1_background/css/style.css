@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body {
+  text-align: center;
+}
+
+/* 流体シェイプ見出しのCSS */
+h1 {
+  background: #0bd;
+  color: #fff;
+  display: inline-block;
+  padding: 6rem 3rem;
+  border-radius: 50%;
+}
