@@ -6,6 +6,7 @@
     --main-color-rgb: 154, 140, 152;
     --base-color: #f2e9e4;
     --sub-color: #c9ada7;
+    --sub-color-rgb: 201, 173, 167;
     --accent-color: #4a4e69;
     --white-color: #fafafa;
     --black-color: #22223b;
@@ -310,4 +311,118 @@ div.footer_wrapper {
     text-align: right;
     padding: 8px 40px;
     border-radius: 24px 24px 0 0;
+}
+
+
+/* ハンバーガーメニューボタン設定 */
+.grobal_nav_btn {
+    display: none;
+    position: fixed;
+    top: 16px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    z-index: 1;
+    background-color: rgb(var(--sub-color-rgb), 0.6);
+    border-radius: 8px;
+}
+
+.grobal_nav_btn span,
+.grobal_nav_btn::before,
+.grobal_nav_btn::after {
+    /* display: block; */
+    width: 30px;
+    height: 1px;
+    background-color: var(--base-color);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transition: transform .4s;
+}
+
+.grobal_nav_btn::before,
+.grobal_nav_btn::after {
+    content: '';
+}
+
+.grobal_nav_btn::before {
+    transform: translateY(-8px);
+}
+
+.grobal_nav_btn::after {
+    transform: translateY(8px);
+}
+
+@media screen and (max-width: 900px) {
+
+    .grobal_nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 0;
+        background-color: var(--base-color);
+        transition: transform .6s;
+    }
+
+    .grobal_nav_btn {
+        display: block;
+    }
+
+    nav.grobal_nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav.grobal_nav ul {
+        /* height: 60%; */
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav.grobal_nav ul li {
+        margin-right: 0;
+    }
+
+    .grobal_nav ul li {
+        margin-right: 0;
+        margin-bottom: 4em;
+    }
+
+    .grobal_nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    nav.grobal_nav a:hover {
+        color: var(--main-color);
+        border-bottom: 1px solid var(--main-color);
+        transition: 0.4s;
+    }
+
+    button.btn {
+        /* width: 300px; */
+        margin: 0 auto;
+    }
+
+    body.is-nav-open .grobal_nav_btn span {
+        transform: scaleX(0);
+    }
+
+    body.is-nav-open .grobal_nav_btn::before {
+        transform: translateY(0) rotate(45deg);
+    }
+
+    body.is-nav-open .grobal_nav_btn::after {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    body.is-nav-open .grobal_nav {
+        transform: translateX(100%);
+    }
+
 }
