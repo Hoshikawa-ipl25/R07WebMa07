@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/* ブレイクポイント
+SP ～519px
+tab 520～959px
+PC 960PX～
+*/
+
+
+/*********************
+ 　　変数宣言 
+*********************/
+:root {
+  --size-sm: 1rem;
+  /* 基準 16px */
+  --size-md: 1.6rem;
+  --size-lg: 2.6rem;
+  --size-xl: 4.2rem;
+  --size-xxl: 6.6rem;
+
+  --main-color: #f77237;
+  --main-color-rgb: 247, 114, 55;
+  /* →rgb(var(--main-color-rgb),0.8)と記述で、不透明度80%つきで設定 */
+  --text-color: #44190c;
+
+  --font-sans: 'Noto Sans JP', sans-serif;
+  --font-serif: 'Noto Serif JP', serif;
+
+  /* 余白 */
+  --gutter-base: 8px;
+
+  /* ページのサイドの余白 */
+  --contents-side-gutter: calc(var(--gutter-base)*2);
+  /* コンテンツ同士の余白 */
+  --contents-gutter: calc(var(--gutter-base)*5);
+  /* コンテンツ同士の余白（PCサイズ用） */
+  --contents-gutter-pc: calc(var(--gutter-base)*10);
+
+
+}
+
+/*********************
+ 共通設定 
+*********************/
+html {
+  /* ↓実質10px */
+  font-size: 62.5%;
+
+}
+
+body {
+  font-size: var(--size-md);
+  line-height: 1.75;
+  font-family: var(--font-sans);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+
+/*********************
+ 　　ヘッダー
+*********************/
+header {
+  padding: var(--gutter-base);
+}
+
+header .header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+/* 左上サイトロゴ */
+header .header_inner h1 {
+  width: 200px;
+}
+
+/* ハンバーガーアイコン */
+header .ham_menu {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  padding: var(--gutter-base);
+  display: flex;
+  align-items: center;
+}
+
+header .ham_menu_text {
+  margin-left: var(--gutter-base);
+}
+
+/* ハンバーガーアイコンの線 */
+header .ham_menu .ham_menu_line::before,
+header .ham_menu .ham_menu_line::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--main-color);
+}
+
+header .ham_menu .ham_menu_line::before {
+  transform: translateY(-2px);
+}
+
+header .ham_menu_line::after {
+  transform: translateY(4px);
+}
+
+/* ハンバーガーアイコンの線（バツ状態） */
+header.on .ham_menu .ham_menu_line::before {
+  transform: translateY(2px) rotate(45deg);
+}
+
+header.on .ham_menu_line::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+/* ヘッダー内ナビメニュー */
+header .header_inner nav {
+  position: fixed;
+  background-color: rgb(var(--main-color-rgb), 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-left: calc(var(--gutter-base)*5);
+  padding-right: calc(var(--gutter-base)*5);
+  padding-top: calc(var(--gutter-base)*10);
+}
+
+header .header_inner nav a {
+  color: #fff;
+  font-size: var(--size-xl);
+  border-bottom: 2px dotted #fff;
+  display: block;
+  line-height: 2.5;
+}
