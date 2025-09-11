@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+/* ブレイクポイント
+SP ～519px
+tab 520～959px
+PC 960PX～
+*/
+
+/*********************
+ mv video
+*********************/
+.mv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.mv video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.mv .pc {
+  display: none;
+}
+
+/* 背景動画のSP・PC切り替え */
+@media screen and (min-width:520px) {
+
+  .mv .pc {
+    display: block;
+  }
+
+  .mv .sp {
+    display: none;
+  }
+}
+
+/*====== min-width:520px ここまで ======*/
+
+
+/*********************
+キーフレーズ設定（CHALONの願いです）
+*********************/
+.key_title .key_title_inner {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.key_title .key_title_inner img {
+  width: 90%;
+  max-width: 520px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+@media screen and (min-width:520px) {
+  .key_title .key_title_inner {
+    justify-content: flex-end;
+    transform: translateX(calc(var(--gutter-base)*-10));
+  }
+}
+
+/*====== min-width:520px ここまで ======*/
+
+
+/*********************
+コンセプト（オープン20周年）
+*********************/
+.concept .concept_text {
+  color: var(--white-color);
+  font-size: var(--size-lg);
+  padding-left: var(--contents-side-gutter);
+  padding-right: var(--contents-side-gutter);
+}
+
+.concept .concept_text p {
+  margin-bottom: var(--size-lg);
+}
+
+/* 画像（店内写真） */
+.concept .concept_img {
+  padding-left: var(--contents-side-gutter);
+  padding-right: var(--contents-side-gutter);
+  max-width: 500px;
+}
+
+@media screen and (min-width:960px) {
+  .concept .concept_inner {
+    display: flex;
+  }
+
+  .concept .concept_img picture {
+    position: sticky;
+    top: 0;
+  }
+}
+
+/*====== min-width:960px ここまで ======*/
+
+
+/*********************
+スクロールダウンの矢印アニメーション
+*********************/
+.scroll_down {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* 矢印の先端 */
+.scroll_down .arrow_down {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--white-color);
+  border-right: 2px solid var(--white-color);
+  transform: rotate(135deg);
+}
+
+/* アニメーションする矢印の軸 */
+.scroll_down::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 90px;
+  background-color: var(--white-color);
+  position: relative;
+  top: 8px;
+
+  /* ↓あとで直したい */
+  left: 50%;
+  transform: translateX(-1px);
+  /* ↑直したい */
+
+  animation: arrow 1.2s ease infinite;
+  /* animation: arrow 1.2s cubic-bezier(1, 0, 0, 1) infinite; */
+}
+
+@keyframes arrow {
+  0% {
+    /* 軸が伸びる基準点 */
+    transform-origin: 0% 0%;
+    /* 軸の大きさが0 */
+    transform: scaleY(0) translateX(-1px);
+  }
+
+  50% {
+    /* 基準点変わらず */
+    transform-origin: 0% 0%;
+    /* 軸の縦方向の大きさ（つまり長さ）が1（100％） */
+    transform: scaleY(1) translateX(-1px);
+
+  }
+
+  51% {
+    /* 基準点を一番下に変更 */
+    transform-origin: 0% 100%;
+    /* 軸の長さはまだ変化なし */
+    transform: scaleY(1) translateX(-1px);
+
+  }
+
+  100% {
+    /* 基準点一番下 */
+    transform-origin: 0% 100%;
+    /* 軸の長さが縮む（0へ） */
+    transform: scaleY(0) translateX(-1px);
+  }
+}

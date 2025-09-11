@@ -22,6 +22,7 @@ PC 960PX～
   --main-color-rgb: 247, 114, 55;
   /* →rgb(var(--main-color-rgb),0.8)と記述で、不透明度80%つきで設定 */
   --text-color: #44190c;
+  --white-color: #fefefe;
 
   --font-sans: 'Noto Sans JP', sans-serif;
   --font-serif: 'Noto Serif JP', serif;
@@ -66,6 +67,12 @@ a {
 *********************/
 header {
   padding: var(--gutter-base);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /* left: 0; */
+  /* right: 0; */
+  z-index: 100;
 }
 
 header .header_inner {
@@ -87,6 +94,8 @@ header .ham_menu {
   padding: var(--gutter-base);
   display: flex;
   align-items: center;
+  z-index: 100;
+  mix-blend-mode: difference;
 }
 
 header .ham_menu_text {
@@ -131,12 +140,61 @@ header .header_inner nav {
   padding-left: calc(var(--gutter-base)*5);
   padding-right: calc(var(--gutter-base)*5);
   padding-top: calc(var(--gutter-base)*10);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
 }
 
 header .header_inner nav a {
-  color: #fff;
+  color: var(--white-color);
   font-size: var(--size-xl);
-  border-bottom: 2px dotted #fff;
+  border-bottom: 2px dotted var(--white-color);
   display: block;
   line-height: 2.5;
 }
+
+header.on .header_inner nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width:960px) {
+  header {
+    padding-top: calc(var(--gutter-base)*3);
+    padding-left: calc(var(--gutter-base)*3);
+    padding-right: calc(var(--gutter-base)*3);
+    /* padding-bottom: calc(var(--gutter-base)*3); */
+  }
+
+  header .ham_menu {
+    display: none;
+  }
+
+  /* ヘッダー内ナビメニュー PC表示 */
+  header .header_inner nav {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  header .header_inner nav a {
+    color: var(--main-color);
+    font-size: var(--size-md);
+    line-height: 1.75;
+    border-bottom: none;
+  }
+
+  header .header_inner nav ul {
+    display: flex;
+  }
+
+  header .header_inner nav li {
+    margin-left: calc(var(--gutter-base)*2);
+  }
+}
+
+/*====== min-width:960px ここまで ======*/
