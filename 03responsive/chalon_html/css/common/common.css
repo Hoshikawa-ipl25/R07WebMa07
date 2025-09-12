@@ -37,6 +37,10 @@ PC 960PX～
   /* コンテンツ同士の余白（PCサイズ用） */
   --contents-gutter-pc: calc(var(--gutter-base)*10);
 
+  /* セクションの余白用 */
+  --section-gutter: calc(var(--gutter-base)*10);
+  --section-gutter-pc: calc(var(--gutter-base)*20);
+
 
 }
 
@@ -60,6 +64,82 @@ a {
   text-decoration: none;
   color: var(--main-color);
 }
+
+.center {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.contents_title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--contents-gutter);
+}
+
+.contents_title.pc {
+  display: none;
+
+}
+
+@media screen and (min-width:960px) {
+  .contents_title.pc {
+    display: block;
+
+  }
+
+  .contents_title.sp {
+    display: none;
+
+  }
+
+  .contents_title {
+    margin-bottom: var(--contents-gutter-pc);
+  }
+}
+
+/*====== min-width:960px ここまで ======*/
+
+
+/* リンクボタン */
+.btn {
+  border: 1px var(--main-color) solid;
+  display: block;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 90px;
+  text-align: center;
+  position: relative;
+  transition: 0.6s;
+}
+
+.btn::after {
+  font-family: 'Material Symbols Outlined';
+  /* content: "\e315 "; */
+  content: "\e5c8";
+  position: absolute;
+  right: 20px;
+}
+
+@media screen and (min-width:960px) {
+
+  .btn:hover {
+    background-color: var(--main-color);
+    color: var(--white-color);
+  }
+
+  .btn:hover::after {
+    content: "\e315";
+    position: absolute;
+    right: 10px;
+  }
+}
+
+/*====== min-width:960px ここまで ======*/
+
+
 
 
 /*********************

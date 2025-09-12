@@ -11,7 +11,20 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
     rel="stylesheet">
 
+
+  <!-- Gooleアイコンフォント -->
+  <!-- ↓すべてのアイコンを読み込む場合 -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
+
+  <!-- 末尾で読み込みたいアイコンの名前をカンマつなぎで列挙（アルファベット順で） -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward,keyboard_arrow_right" />
+
   <link rel="stylesheet" href="css/common/reset.css">
+  <!-- SlickSlider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+
   <link rel="stylesheet" href="css/common/common.css">
   <link rel="stylesheet" href="css/page/top.css">
 </head>
@@ -34,6 +47,7 @@
       </nav>
     </div>
   </header>
+
   <!-- キーフレーズ -->
   <div class="key_title">
     <div class="key_title_inner">
@@ -43,7 +57,7 @@
 
   <!-- コンセプトメッセージ -->
   <div class="concept">
-    <div class="concept_inner">
+    <div class="concept_inner center">
       <div class="concept_text">
         <p>
           当店は、今年でオープンして２０年が経ちました。<br>
@@ -82,50 +96,132 @@
     </div>
   </div>
 
+  <!-- MENUセクション -->
+  <section class="menu">
+    <div class="menu_inner">
+      <h2>
+        <img class="sp contents_title" src="img/title_menu_sp.svg" alt="メニュー">
+        <img class="pc contents_title" src="img/title_menu_pc.svg" alt="メニュー">
+      </h2>
+      <!-- スライダーのお菓子写真 ここから -->
+      <ul class="slider">
+        <li>
+          <picture>
+            <source srcset="img/menu_01.webp" type="image/webp">
+            <img src="img/menu_01.jpg" alt="ショートケーキの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_02.webp" type="image/webp">
+            <img src="img/menu_02.jpg" alt="チョコレートケーキの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_03.webp" type="image/webp">
+            <img src="img/menu_03.jpg" alt="チーズケーキの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_04.webp" type="image/webp">
+            <img src="img/menu_04.jpg" alt="ベイクドチーズケーキの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_05.webp" type="image/webp">
+            <img src="img/menu_05.jpg" alt="モンブランの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_06.webp" type="image/webp">
+            <img src="img/menu_06.jpg" alt="ロールケーキの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_07.webp" type="image/webp">
+            <img src="img/menu_07.jpg" alt="フルーツタルトの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_08.webp" type="image/webp">
+            <img src="img/menu_08.jpg" alt="イチゴのタルトの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_09.webp" type="image/webp">
+            <img src="img/menu_09.jpg" alt="ティラミスの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_10.webp" type="image/webp">
+            <img src="img/menu_10.jpg" alt="バタークッキーの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_11.webp" type="image/webp">
+            <img src="img/menu_11.jpg" alt="チョコチップクッキーの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_12.webp" type="image/webp">
+            <img src="img/menu_12.jpg" alt="クッキーセットの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_13.webp" type="image/webp">
+            <img src="img/menu_13.jpg" alt="フルーツのゼリーの写真">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="img/menu_14.webp" type="image/webp">
+            <img src="img/menu_14.jpg" alt="マカロンの写真">
+          </picture>
+        </li>
+      </ul>
+      <!-- スライダーのお菓子写真 ここまで -->
 
+      <p class="menu_text">
+        お客様がケーキを楽しんでいただけるよう、<br>
+        一つ一つの素材や鮮度にこだわっています。<br>
+        当店自慢のケーキや焼き菓子を、<br>
+        どうぞ召し上がってください。</p>
+    </div>
+    <!-- リンクボタン -->
+    <a class="btn" href="#">メニュー一覧</a>
+  </section>
 
-  <!-- 後で消します（ページをスクロールさせて確認する用） -->
-  <div>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-    <p>確認用　あとで消す</p>
-  </div>
+  <!-- お菓子教室Lessonのセクション -->
+  <section class="lesson">
+    <div class="lesson_inner">
+      <h2>
+        <img class="sp contents_title" src="img/title_lesson_sp.svg" alt="メニュー">
+        <img class="pc contents_title" src="img/title_lesson_pc.svg" alt="メニュー">
+      </h2>
+      <p class="lesson_text">
+        CHALONでは、毎月第１・第２土曜日に、ご家族で参加できるお菓子教室を開催しています。<br>
+        当店の職人が、一から丁寧にレクチャーしますので、小さいお子さんでも安心して参加していただけます。<br>
+        家族の楽しい思い出作りに、是非御参加ください。
+      </p>
+      <picture class="lesson_img">
+        <source srcset="img/top_lesson.webp" type="image/webp">
+        <img src="img/top_lesson.jpg" alt="">
+      </picture>
+      <a class="btn" href="#">お菓子教室についてもっとみる</a>
+    </div>
+  </section>
+
 
   <!-- 背景の動画 -->
   <div class="mv">
@@ -141,7 +237,10 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- slickのJavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/top.js"></script>
 </body>
 
 </html>

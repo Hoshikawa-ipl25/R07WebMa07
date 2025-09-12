@@ -73,6 +73,11 @@ PC 960PX～
 /*********************
 コンセプト（オープン20周年）
 *********************/
+.concept_inner {
+  margin-bottom: 25vh;
+}
+
+
 .concept .concept_text {
   color: var(--white-color);
   font-size: var(--size-lg);
@@ -96,13 +101,41 @@ PC 960PX～
     display: flex;
   }
 
+  /* 画像がいったん止まるところ */
   .concept .concept_img picture {
     position: sticky;
-    top: 0;
+    /* top: 200px; 画面の上からの絶対位置固定でいったん止まる*/
+    top: calc(50vh - 175px);
   }
 }
 
 /*====== min-width:960px ここまで ======*/
+
+/*********************
+Menu セクション
+*********************/
+.menu {
+  background-color: var(--white-color);
+  padding: var(--section-gutter) 0;
+}
+
+.menu .menu_text {
+  text-align: center;
+  margin-bottom: var(--contents-gutter);
+}
+
+.menu .slider {
+  margin-bottom: var(--contents-gutter);
+}
+
+.menu .slider li {
+  padding: 0 calc(var(--gutter-base)*2);
+}
+
+
+
+
+
 
 
 /*********************
@@ -137,7 +170,8 @@ PC 960PX～
   /* ↓あとで直したい */
   left: 50%;
   transform: translateX(-1px);
-  /* ↑直したい */
+  /* left: calc(50% - 1px); */
+  /* ↑これに直したい */
 
   animation: arrow 1.2s ease infinite;
   /* animation: arrow 1.2s cubic-bezier(1, 0, 0, 1) infinite; */
