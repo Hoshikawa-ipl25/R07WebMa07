@@ -46,6 +46,10 @@ PC 960PX～
 /*********************
 キーフレーズ設定（CHALONの願いです）
 *********************/
+.key_title {
+  height: 150vh;
+}
+
 .key_title .key_title_inner {
   display: flex;
   width: 100%;
@@ -132,7 +136,126 @@ Menu セクション
   padding: 0 calc(var(--gutter-base)*2);
 }
 
+@media screen and (min-width:960px) {
+  .menu {
+    padding: var(--section-gutter-pc) 0;
+  }
+}
 
+/*====== min-width:960px ここまで ======*/
+
+/*********************
+Lesson セクション
+*********************/
+
+.lesson {
+  background-color: var(--white-color);
+  padding: var(--section-gutter) 0;
+}
+
+.lesson .lesson_text {
+  padding: 0 var(--contents-side-gutter);
+  margin-bottom: var(--contents-gutter);
+}
+
+.lesson .lesson_img {
+  display: block;
+  padding: 0 var(--contents-side-gutter);
+  margin-bottom: var(--contents-gutter);
+}
+
+@media screen and (min-width:960px) {
+  .lesson {
+    padding: var(--section-gutter-pc) 0;
+  }
+
+  .lesson .lesson_inner {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-rows: repeat(3, 1fr);
+
+  }
+
+  .lesson .lesson_img {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    margin-bottom: 0;
+  }
+
+  .lesson .btn {
+    align-self: start;
+  }
+
+}
+
+/*====== min-width:960px ここまで ======*/
+
+/* ショウウインドウ画像（固定） */
+.bg_placeholder {
+  height: 350px;
+  opacity: 0;
+  background-image: url(../../img/top_showcase.jpg);
+  background-size: cover;
+}
+
+
+
+/*********************
+News セクション
+*********************/
+.news {
+  background-color: var(--white-color);
+  padding-top: var(--section-gutter);
+  padding-bottom: var(--footer-gutter);
+
+}
+
+.news dl {
+  padding: 0 var(--contents-side-gutter);
+  margin-bottom: calc(var(--gutter-base)*2);
+}
+
+.news dl:last-child {
+  margin-bottom: 0;
+}
+
+.news dd {
+  border-bottom: 2px dotted var(--main-color);
+  padding-bottom: var(--gutter-base);
+}
+
+/* タブレットサイズ以上 日付と記事タイトル横並び */
+@media screen and (min-width:520px) {
+  .news dl {
+    display: flex;
+    border-bottom: 2px dotted var(--main-color);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .news dt {
+    width: 30%;
+  }
+
+  .news dd {
+    border-bottom: none;
+    width: 70%;
+  }
+}
+
+/*====== min-width:520px ここまで ======*/
+
+@media screen and (min-width:960px) {
+  .news {
+    padding-bottom: var(--footer-gutter);
+  }
+}
+
+/*====== min-width:960px ここまで ======*/
 
 
 
@@ -145,6 +268,7 @@ Menu セクション
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: -1;
 }
 
 /* 矢印の先端 */
