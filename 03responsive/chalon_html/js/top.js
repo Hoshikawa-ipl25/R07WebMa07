@@ -46,13 +46,36 @@ $('.slider').slick({
 
 const title_ob_func = (entries) => {
   if (entries[0].isIntersecting) {
-    console.log('監視中');
+    // console.log(entries[0]);
+    // const targeted = document.querySelector('#content_title_menu');
+    // console.log(entries[0].target.dataset.src);
+    entries[0].target.setAttribute('src', entries[0].target.dataset.src);
   }
+  // setAttributeメソッドの使い方
+  // https://web-tsuku.life/setattribute/
+  // （難しいので、プログラミングしっかりやりたい人向け解説）
 };
 
 const title_param = {
-  // オブザーバーの設定を後で書くかも
+  rootMargin: '-160px',
 };
 
 const title_ob = new IntersectionObserver(title_ob_func, title_param);
-title_ob.observe(document.querySelector('#content_title_menu'));
+const titles = document.querySelectorAll('.contents_title');
+
+// for (let i = 0; i < titles.length; i++) {
+//   console.log(titles[i]);
+//   title_ob.observe(titles[i]);
+// }
+//      ↑
+//    やっていること同じ
+//      ↓
+for (title of titles) {
+  // console.log(title);
+  title_ob.observe(title);
+
+}
+// forof文
+// for( 配列から取り出したの中身1つ of 配列名){
+//   //配列の中身の個数分繰り返される処理をここに記述
+// }

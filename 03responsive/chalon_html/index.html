@@ -32,14 +32,14 @@
 <body>
   <header>
     <div class="header_inner">
-      <h1><img src="img/logo.svg" alt="洋菓子店CAHLON"></h1>
+      <h1><a href="./"><img src="img/logo.svg" alt="洋菓子店CAHLON"></a></h1>
       <button class="ham_menu">
         <span class="ham_menu_line"></span>
         <span class="ham_menu_text">MENU</span>
       </button>
       <nav>
         <ul>
-          <li><a href="#">当店について</a></li>
+          <li><a href="about/">当店について</a></li>
           <li><a href="#">メニュー</a></li>
           <li><a href="#">お菓子教室</a></li>
           <li><a href="#">アクセス</a></li>
@@ -99,9 +99,11 @@
   <!-- MENUセクション -->
   <section class="menu">
     <div class="menu_inner">
-      <h2 id="content_title_menu">
-        <img class="sp contents_title" src="img/title_menu_sp.svg" alt="メニュー">
-        <img class="pc contents_title" src="img/title_menu_pc.svg" alt="メニュー">
+      <h2>
+        <img class="sp contents_title" src="img/spacer.png" data-src="img/title_menu_sp.svg" alt="メニュー"
+          style="height: 67px">
+        <img class="pc contents_title" src="img/spacer.png" data-src="img/title_menu_pc.svg" alt="メニュー"
+          style="height: 134px">
       </h2>
       <!-- スライダーのお菓子写真 ここから -->
       <ul class="slider">
@@ -206,8 +208,10 @@
   <section class="lesson">
     <div class="lesson_inner center">
       <h2>
-        <img class="sp contents_title" src="img/title_lesson_sp.svg" alt="レッスン">
-        <img class="pc contents_title" src="img/title_lesson_pc.svg" alt="レッスン">
+        <img class="sp contents_title" src="img/spacer.png" data-src="img/title_lesson_sp.svg" alt="レッスン"
+          style="height: 67px">
+        <img class="pc contents_title" src="img/spacer.png" data-src="img/title_lesson_pc.svg" alt="レッスン"
+          style="height: 134px">
       </h2>
       <p class="lesson_text">
         CHALONでは、毎月第１・第２土曜日に、ご家族で参加できるお菓子教室を開催しています。<br>
@@ -230,8 +234,10 @@
   <section class="news">
     <div class="news_inner center">
       <h2>
-        <img class="sp contents_title" src="img/title_news_sp.svg" alt="ニュース">
-        <img class="pc contents_title" src="img/title_news_pc.svg" alt="ニュース">
+        <img class="sp contents_title" src="img/spacer.png" data-src="img/title_news_sp.svg" alt="ニュース"
+          style="height: 67px">
+        <img class="pc contents_title" src="img/spacer.png" data-src="img/title_news_pc.svg" alt="ニュース"
+          style="height: 135px">
       </h2>
 
       <dl>
@@ -283,6 +289,7 @@
     <span class="arrow_down"></span>
   </div>
 
+  <!-- jQueryの読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!-- slickのJavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

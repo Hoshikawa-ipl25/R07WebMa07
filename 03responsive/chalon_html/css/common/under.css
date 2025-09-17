@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* ブレイクポイント
+SP ～519px
+tab 520～959px
+PC 960PX～
+*/
+
+/*****************************/
+/* 下層ページのページタイトル */
+/*****************************/
+
+.under_page_title {
+  height: 40vh;
+  background-image: url(../../img/top_lesson.webp);
+  background-size: cover;
+  background-position: center center;
+}
+
+.under_page_title .under_page_title_inner {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.under_page_title .contents_title {
+  background-color: rgb(var(--white-color-rgb), 0.8);
+  padding-top: calc(var(--gutter-base)*2);
+  padding-bottom: calc(var(--gutter-base)*2);
+  padding-left: calc(var(--gutter-base)*4);
+  padding-right: calc(var(--gutter-base)*4);
+  margin-bottom: 0;
+}
+
+@media screen and (min-width:960px) {
+
+  .under_page_title {
+    height: 500px;
+  }
+
+  .under_page_title .under_page_title_inner {
+    height: 500px;
+    justify-content: flex-start;
+  }
+
+  .under_page_title .contents_title {
+    padding-top: calc(var(--gutter-base)*3);
+    padding-bottom: calc(var(--gutter-base)*3);
+    padding-left: calc(var(--gutter-base)*6);
+    padding-right: calc(var(--gutter-base)*6);
+  }
+
+}
+
+/*====== min-width:960px ここまで ======*/
