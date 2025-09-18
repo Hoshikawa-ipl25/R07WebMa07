@@ -197,10 +197,35 @@ Lesson セクション
 .bg_placeholder {
   height: 350px;
   opacity: 0;
-  background-image: url(../../img/top_showcase.jpg);
-  background-size: cover;
+  /* background-image: url(../../img/top_showcase.jpg);
+  background-size: cover; */
 }
 
+@media screen and (min-width:960px) {
+  .bg_placeholder {
+    height: 600px;
+  }
+}
+
+/*====== min-width:960px ここまで ======*/
+
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../img/top_showcase.webp);
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  display: none;
+}
+
+.bg.on {
+  display: block;
+}
 
 
 /*********************
@@ -291,14 +316,11 @@ News セクション
   position: relative;
   top: 8px;
 
-  /* ↓あとで直したい */
-  left: 50%;
-  transform: translateX(-1px);
-  /* left: calc(50% - 1px); */
-  /* ↑これに直したい */
+  /* left: 50%; */
+  /* transform: translateX(-1px); */
+  left: calc(50% - 1px);
 
-  animation: arrow 1.2s ease infinite;
-  /* animation: arrow 1.2s cubic-bezier(1, 0, 0, 1) infinite; */
+  animation: arrow 1.2s cubic-bezier(1, 0, 0, 1) infinite;
 }
 
 @keyframes arrow {
@@ -306,14 +328,14 @@ News セクション
     /* 軸が伸びる基準点 */
     transform-origin: 0% 0%;
     /* 軸の大きさが0 */
-    transform: scaleY(0) translateX(-1px);
+    transform: scaleY(0);
   }
 
   50% {
     /* 基準点変わらず */
     transform-origin: 0% 0%;
     /* 軸の縦方向の大きさ（つまり長さ）が1（100％） */
-    transform: scaleY(1) translateX(-1px);
+    transform: scaleY(1);
 
   }
 
@@ -321,7 +343,7 @@ News セクション
     /* 基準点を一番下に変更 */
     transform-origin: 0% 100%;
     /* 軸の長さはまだ変化なし */
-    transform: scaleY(1) translateX(-1px);
+    transform: scaleY(1);
 
   }
 
@@ -329,6 +351,6 @@ News セクション
     /* 基準点一番下 */
     transform-origin: 0% 100%;
     /* 軸の長さが縮む（0へ） */
-    transform: scaleY(0) translateX(-1px);
+    transform: scaleY(0);
   }
 }

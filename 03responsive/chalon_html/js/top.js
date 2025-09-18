@@ -79,3 +79,23 @@ for (title of titles) {
 // for( 配列から取り出したの中身1つ of 配列名){
 //   //配列の中身の個数分繰り返される処理をここに記述
 // }
+
+
+//背景画像を動画から固定写真に切り替えるための監視observer
+const bg_ob_func = (entries) => {
+  const bg = document.querySelector('#bg')
+  for (entry of entries) {
+    if (entry.isIntersecting) {
+      bg.classList.add('on');
+    } else {
+      bg.classList.remove('on');
+    }
+  }
+};
+
+const bg_ob_param = {
+  rootMargin: '300px',
+};
+
+const bg_ob = new IntersectionObserver(bg_ob_func, bg_ob_param);
+bg_ob.observe(document.querySelector('#bg_placeholder'));
