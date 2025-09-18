@@ -14,6 +14,7 @@ PC 960PX～
   background-image: url(../../img/top_lesson.webp);
   background-size: cover;
   background-position: center center;
+  margin-bottom: var(--section-gutter);
 }
 
 .under_page_title .under_page_title_inner {
@@ -37,6 +38,7 @@ PC 960PX～
 
   .under_page_title {
     height: 500px;
+    margin-bottom: var(--section-gutter-pc);
   }
 
   .under_page_title .under_page_title_inner {
@@ -51,6 +53,36 @@ PC 960PX～
     padding-right: calc(var(--gutter-base)*6);
   }
 
+}
+
+/*====== min-width:960px ここまで ======*/
+
+h3.page_title {
+  font-family: var(--font-serif);
+  font-size: var(--size-xl);
+  color: var(--main-color);
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: var(--section-gutter);
+}
+
+h4.section_title {
+  font-family: var(--font-serif);
+  font-size: var(--size-lg);
+  color: var(--main-color);
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: var(--contents-gutter);
+}
+
+@media screen and (min-width:960px) {
+  h3.page_title {
+    font-size: var(--size-xxl);
+  }
+
+  h4.section_title {
+    font-size: var(--size-xl);
+  }
 }
 
 /*====== min-width:960px ここまで ======*/

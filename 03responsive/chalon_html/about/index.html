@@ -10,7 +10,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
     rel="stylesheet">
+
   <link rel="stylesheet" href="../css/common/reset.css">
+
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/common/under.css">
   <link rel="stylesheet" href="../css/page/about.css">
@@ -44,8 +46,10 @@
   </div>
 
   <section class="about">
+
     <h3 class="page_title">当店のこだわり</h3>
     <section class="about_sozai">
+      <!-- 素材の紹介 -->
       <div class="about_sozai_inner">
         <h4 class="section_title">最高の素材を・・・</h4>
         <div class="about_sozai_text">
@@ -58,11 +62,11 @@
           <p>店主のこだわりが詰まったCHALONのケーキを、是非召し上がってください。</p>
         </div>
         <div class="about_sozai_img">
-          <picture>
+          <picture class="to_right">
             <source srcset="../img/about_01.webp" type="image/webp">
             <img src="../img/about_01.jpg" alt="卵の写真">
           </picture>
-          <picture>
+          <picture class="to_left">
             <source srcset="../img/about_02.webp" type="image/webp">
             <img src="../img/about_02.jpg" alt="小麦の写真">
           </picture>
@@ -70,13 +74,33 @@
       </div>
     </section>
 
+    <!-- 店内の紹介 -->
+    <section class="about_kuukan">
+      <div class="about_kuukan_inner">
+        <h4 class="section_title">落ち着ける空間を・・・・</h4>
+        <div class="about_kuukan_text">
+          <p>CHALONでは、買ったその場でケーキを召し上がっていただけるよう、イートインスペースを設けています。是非ご利用ください。</p>
+          <p>イートインスペースの椅子やテーブルは、温かみのある北欧家具の物を選んでいます。</p>
+          <p>また、食器も海外のものを取り寄せています。</p>
+          <p>照明は明るすぎず、読書や会話を邪魔しない、優しい明るさにしています。</p>
+          <p>コーヒーや紅茶と一緒に、ティータイムを楽しんで行って下さい。</p>
+        </div>
+        <div class="about_kuukan_img">
+          <picture class="to_right">
+            <source srcset="../img/about_03.webp" type="image/webp">
+            <img src="../img/about_03.jpg" alt="店内の写真">
+          </picture>
+          <picture class="to_left">
+            <source srcset="../img/about_04.webp" type="image/webp">
+            <img src="../img/about_04.jpg" alt="カフェラテのあるカウンターの写真">
+          </picture>
+        </div>
+      </div>
+    </section>
 
   </section>
 
-
-
-
-  <!-- <footer>
+  <footer>
     <div class="footer">
       <img src="../img/logo_white.svg" alt="洋菓子店シャロン ロゴマーク">
       <address>
@@ -85,11 +109,13 @@
       </address>
       <small>&copy;CHALON</small>
     </div>
-  </footer> -->
+  </footer>
 
   <!-- jQueryの読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="js/common.js"></script>
+
+  <script src="../js/about.js"></script>
+  <script src="../js/common.js"></script>
 </body>
 
 </html>
