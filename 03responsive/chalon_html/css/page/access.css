@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* ブレイクポイント
+SP ～519px
+tab 520～959px
+PC 960PX～
+*/
+
+.access {
+  margin-bottom: var(--footer-gutter);
+
+}
+
+.access .access_inner {
+  padding: 0 var(--contents-side-gutter);
+}
+
+/* .access .access_inner h3 {
+  reset.cssで、
+  text-wrap: balance;
+  にされているので、必要なさそうならデフォルト値に
+  　↓
+  text-wrap: wrap;
+} */
+.access .access_inner .map {
+  margin-bottom: var(--contents-gutter);
+}
+
+.access .access_inner address {
+  font-style: normal;
+  margin-bottom: var(--contents-gutter);
+
+}
+
+.access .access_inner .btn.access_btn {
+  color: #3cad5a;
+  border: 1px #3cad5a solid;
+  margin-bottom: var(--contents-gutter);
+}
+
+.access .access_inner dl:not(:last-child) {
+  margin-bottom: calc(var(--gutter-base)*3);
+}
+
+.access .access_inner dt {
+  color: var(--main-color);
+}
+
+.access .access_inner ol {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.access .access_inner ol li {
+  margin-bottom: var(--gutter-base);
+}
+
+/* PCサイズ */
+@media screen and (min-width:960px) {
+  .access .access_inner {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--contents-gutter-pc);
+  }
+
+  .access .access_inner .btn.access_btn:hover {
+    background-color: #3cad5a;
+    color: var(--white-color);
+  }
+
+  .access .access_inner .map {
+    margin-bottom: var(--contents-gutter-pc);
+  }
+
+  .access .access_inner address {
+    margin-bottom: var(--contents-gutter-pc);
+  }
+
+  .access .access_inner .btn.access_btn {
+    margin-bottom: var(--contents-gutter-pc);
+
+  }
+}

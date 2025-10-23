@@ -101,6 +101,13 @@ a {
   .contents_title {
     margin-bottom: var(--contents-gutter-pc);
   }
+
+  /* パソコン表示の時だけ出てくる<br>改行 */
+  br.pc_br_off {
+    display: none;
+  }
+
+
 }
 
 /*====== min-width:960px ここまで ======*/
