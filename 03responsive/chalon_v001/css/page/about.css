@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* ブレイクポイント
+SP ～519px
+tab 520～959px
+PC 960PX～
+*/
+
+.about .about_sozai_inner,
+.about .about_kuukan_inner {
+  padding: 0 var(--contents-side-gutter);
+}
+
+/*********************
+ 　　テキスト 
+*********************/
+
+.about .about_sozai_text,
+.about .about_kuukan_text {
+  margin-bottom: var(--contents-gutter);
+}
+
+/* not:(:疑似クラス)　～じゃない(not)、を指定する疑似クラス */
+.about .about_sozai_text p:not(:last-child),
+.about .about_kuukan_text p:not(:last-child) {
+  margin-bottom: var(--size-md);
+}
+
+/* :last-child 並んでいる要素一番最後だけ、を指定する疑似クラス 
+.about .about_sozai_text p:last-child {
+  margin-bottom: 0;
+} */
+
+
+/*********************
+ 　　画像
+*********************/
+.about .about_sozai_img,
+.about .about_kuukan_img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--gutter-base)*2);
+  margin-bottom: var(--section-gutter);
+  overflow: hidden;
+}
+
+.about .about_kuukan_img {
+  margin-bottom: var(--footer-gutter);
+}
+
+/* アニメーション・外に出しとく */
+.about .about_sozai_img .to_right,
+.about .about_kuukan_img .to_right {
+  transform: translateX(-100vw);
+  transition: 0.3s;
+}
+
+.about .about_sozai_img .to_left,
+.about .about_kuukan_img .to_left {
+  transform: translateX(100vw);
+  transition: 0.3s;
+}
+
+/* .onが付いたら、元の位置に戻る */
+.about .about_sozai_img.on .to_right,
+.about .about_kuukan_img.on .to_right,
+.about .about_sozai_img.on .to_left,
+.about .about_kuukan_img.on .to_left {
+  transform: translateX(0);
+}
+
+
+/* PCサイズ */
+@media screen and (min-width:960px) {
+
+  .about .about_sozai_text,
+  .about .about_kuukan_text {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--contents-gutter-pc);
+  }
+
+  .about .about_sozai_img,
+  .about .about_kuukan_img {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--section-gutter-pc);
+    gap: calc(var(--gutter-base)*10);
+
+  }
+}
+
+/*====== min-width:960px ここまで ======*/

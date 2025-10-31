@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/*
+SP ～519px
+tab 520px～959px
+pc 960px～
+*/
+
+.menu_single {
+    margin-bottom: var(--footer-gutter);
+}
+
+.menu_single .menu_single_box {
+    padding: 0 var(--contents-side-gutter);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu_single .menu_single_box picture {
+    margin-bottom: var(--contents-gutter);
+    display: block;
+}
+
+.menu_single .menu_single_box div {
+    margin-bottom: var(--contents-gutter);
+}
+
+.menu_single .menu_single_box dl {
+    border-bottom: 2px dotted var(--main-color);
+    padding-bottom: var(--gutter-base);
+}
+
+.menu_single .menu_single_box dl:not(:last-child) {
+    margin-bottom: calc(var(--gutter-base)*2);
+}
+
+.menu_single .menu_single_box dl dt {
+    color: var(--main-color);
+}
+
+.menu_single .menu_single_box dl dt::before {
+    font-family: 'Material Symbols Outlined';
+    content: "\e834";
+    vertical-align: middle;
+    margin-right: calc(var(--gutter-base)/2);
+}
+
+@media screen and (min-width:960px) {
+    .menu_single .menu_single_box {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: var(--contents-gutter);
+        margin-bottom: var(--contents-gutter-pc);
+    }
+
+    .menu_single .menu_single_box picture {
+        margin-bottom: 0;
+    }
+}
+
+/*=======min-width:960px=======*/

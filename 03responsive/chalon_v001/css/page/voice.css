@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/*
+SP ～519px
+tab 520px～959px
+pc 960px～
+*/
+.voice {
+    margin-bottom: var(--footer-gutter);
+}
+
+.voice .voice_box {
+    padding: 0 var(--contents-side-gutter);
+    margin-bottom: var(--contents-gutter);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.voice .voice_box picture {
+    display: block;
+    margin-bottom: var(--contents-gutter);
+}
+
+.voice .voice_box dl {
+    border-bottom: 2px dotted var(--main-color);
+    padding-bottom: var(--gutter-base);
+}
+
+.voice .voice_box dl:not(:last-child) {
+    margin-bottom: calc(var(--gutter-base)*2);
+}
+
+.voice .voice_box dl dt {
+    color: var(--main-color);
+}
+
+.voice .voice_box dl dt::before {
+    content: '\e834';
+    font-family: 'Material Symbols Outlined';
+    vertical-align: middle;
+}
+
+.voice .voice_interview_box_wrap {
+    padding: 0 var(--contents-side-gutter);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.voice .voice_interview_box_wrap h4::before,
+.voice .voice_interview_box_wrap h4::after {
+    content: '\f754';
+    font-family: 'Material Symbols Outlined';
+}
+
+.voice .voice_interview_box_wrap h4::before {
+    transform: scaleX(-1);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: var(--gutter-base);
+}
+
+.voice .voice_interview_box_wrap h4::after {
+    vertical-align: middle;
+    margin-left: var(--gutter-base);
+}
+
+.voice .voice_interview_box {
+    margin-bottom: calc(var(--gutter-base)*8);
+}
+
+.voice .voice_interview_box_q {
+    margin-bottom: calc(var(--gutter-base)*5);
+}
+
+.voice .voice_interview_box_q dt,
+.voice .voice_interview_box_a dt {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--gutter-base);
+}
+
+.voice .voice_interview_box_q dt span {
+    font-size: var(--size-xl);
+    border: 1px solid #ccc;
+    padding: var(--gutter-base);
+    border-radius: 50%;
+    margin-right: var(--gutter-base);
+}
+
+.voice .voice_interview_box_q dd {
+    border: 1px solid #ccc;
+    padding: calc(var(--gutter-base)*2);
+    margin-left: calc(var(--size-xl) + calc(var(--gutter-base)*2));
+}
+
+.voice .voice_interview_box_a dt {
+    justify-content: flex-end;
+}
+
+.voice .voice_interview_box_a dt picture {
+    width: calc(var(--size-xl) + var(--gutter-base));
+    height: calc(var(--size-xl) + var(--gutter-base));
+    margin-left: var(--gutter-base);
+}
+
+.voice .voice_interview_box_a dt picture img {
+    border-radius: 50%;
+}
+
+.voice .voice_interview_box_a dd {
+    border: 1px solid #ccc;
+    padding: calc(var(--gutter-base)*2);
+    margin-right: calc(var(--size-xl) + calc(var(--gutter-base)*2));
+
+}
+
+@media screen and (min-width:960px) {
+    .voice .voice_box {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: var(--contents-gutter);
+        margin-bottom: var(--contents-gutter-pc);
+    }
+}
+
+/*=======min-width:960px=======*/
