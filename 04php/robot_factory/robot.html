@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>どんなロボットを作る？ - ロボットファクトリー -</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="robot_detail">
+        <h2><img src="img/title.svg" alt="どんなロボットを作る？"></h2>
+        <form action="create.php" method="post">
+            <dl>
+                <dt><label for="namae">名前</label></dt>
+                <dd><input type="text" name="robo_name" id="namae"></dd>
+                <dt><label for="iro">色</label></dt>
+                <dd>
+                    <select name="color" id="iro">
+                        <option value="blue">青</option>
+                        <option value="green">緑</option>
+                        <option value="orange">オレンジ</option>
+                    </select>
+                </dd>
+                <dt><label for="ohkisa">大きさ</label></dt>
+                <dd>
+                    <select name="size" id="ohkisa">
+                        <option value="s">小さめ</option>
+                        <option value="m">中くらい</option>
+                        <option value="l">大きめ</option>
+                    </select>
+                </dd>
+                <dt><label for="yoko">横の位置</label></dt>
+                <dd>
+                    <input type="number" name="x" id="yoko">
+                </dd>
+                <dt><label for="tate">縦の位置</label></dt>
+                <dd>
+                    <input type="number" name="y" id="tate">
+                </dd>
+                <dt><label for="kakudo">角度</label></dt>
+                <dd>
+                    <input type="number" name="angle" id="kakudo">
+                </dd>
+
+
+            </dl>
+            <button>ロボットを作る</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
