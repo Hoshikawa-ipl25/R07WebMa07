@@ -11,6 +11,36 @@ body {
     color: #333;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main_title {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 32px;
+}
+
+.start_btn {
+    width: 300px;
+    line-height: 70px;
+    display: block;
+    background-color: #da3a65;
+    color: #fff;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.start_btn:hover {
+    opacity: 0.6;
+}
+
+
 h2 {
     margin-bottom: 36px;
 }
@@ -27,6 +57,7 @@ dd select {
     padding: 1rem;
 
 }
+
 
 .robot_detail {
     /* width: 70%; */
@@ -45,9 +76,19 @@ dd select {
 
 }
 
+.robot_detail dt {
+    margin-bottom: 4px;
+}
+
+
+dd.radio_btn label {
+    margin-right: 16px;
+}
+
 
 .bg {
     background-image: url(../img/bg.jpg);
+    background-color: #7F706C;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -84,6 +125,10 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    opacity: 0.6;
+}
+
 a.back {
     display: block;
     background-color: #da3a65;
@@ -91,6 +136,7 @@ a.back {
     color: #fff;
     width: 70px;
     line-height: 70px;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 35px;
     position: fixed;
@@ -99,6 +145,6 @@ a.back {
     text-align: center;
 }
 
-button:hover {
-    opacity: 0.6;
+a.back:hover {
+    background-color: #e87e9a;
 }

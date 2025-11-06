@@ -13,42 +13,35 @@
         <h2><img src="img/title.svg" alt="どんなロボットを作る？"></h2>
         <form action="create.php" method="post">
             <dl>
-                <dt><label for="namae">名前</label></dt>
-                <dd><input type="text" name="robo_name" id="namae"></dd>
+                <dt><label for="named">名前</label></dt>
+                <dd><input type="text" name="robo_name" id="named"></dd>
                 <dt><label for="iro">色</label></dt>
                 <dd>
-                    <select name="color" id="iro">
-                        <option value="blue">青</option>
+                    <select name="robo_color" id="iro">
+                        <option value="blue" selected>青</option>
                         <option value="green">緑</option>
                         <option value="orange">オレンジ</option>
+                        <option value="purple">紫</option>
+                        <option value="red">赤</option>
+                        <option value="yellow">黄色</option>
                     </select>
                 </dd>
-                <dt><label for="ohkisa">大きさ</label></dt>
-                <dd>
-                    <select name="size" id="ohkisa">
-                        <option value="s">小さめ</option>
-                        <option value="m">中くらい</option>
-                        <option value="l">大きめ</option>
-                    </select>
+                <dt>大きさ</dt>
+                <dd class="radio_btn">
+                    <input type="radio" name="robo_size" value="s" id="s" checked><label for="s">小さめ</label>
+                    <input type="radio" name="robo_size" value="m" id="m"><label for="m">普通</label>
+                    <input type="radio" name="robo_size" value="l" id="l"><label for="l">大きめ</label>
                 </dd>
-                <dt><label for="yoko">横の位置</label></dt>
-                <dd>
-                    <input type="number" name="x" id="yoko">
-                </dd>
-                <dt><label for="tate">縦の位置</label></dt>
-                <dd>
-                    <input type="number" name="y" id="tate">
-                </dd>
-                <dt><label for="kakudo">角度</label></dt>
-                <dd>
-                    <input type="number" name="angle" id="kakudo">
-                </dd>
+                <dt><label for="x">横の位置</label></dt>
+                <dd><input type="number" name="robo_x" id="x"></dd>
 
+                <dt><label for="y">縦の位置</label></dt>
+                <dd><input type="number" name="robo_y" id="y"></dd>
 
+                <dt><label for="angle">角度</label></dt>
+                <dd><input type="number" name="robo_angle" id="angle"></dd>
             </dl>
             <button>ロボットを作る</button>
-        </form>
-
     </div>
 </body>
 

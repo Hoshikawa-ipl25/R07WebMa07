@@ -1,17 +1,17 @@
 <?php
 $robo_name = $_POST["robo_name"];
-$color = $_POST["color"];
-$size = $_POST["size"];
-$x = $_POST["x"];
-$y = $_POST["y"];
-$angle = $_POST["angle"];
-// echo $size . $x . $y . $angle;
+$robo_color = $_POST["robo_color"];
+$robo_size = $_POST["robo_size"];
+$robo_x = $_POST["robo_x"];
+$robo_y = $_POST["robo_y"];
+$robo_angle = $_POST["robo_angle"];
+// echo $robo_size . $robo_x . $robo_y . $robo_angle;
 
-if ($size == 'l') {
+if ($robo_size == 'l') {
     $size_px = '300px';
-} elseif ($size == 'm') {
+} elseif ($robo_size == 'm') {
     $size_px = '200px';
-} elseif ($size == 's') {
+} elseif ($robo_size == 's') {
     $size_px = '100px';
 } else {
     $size_px = '40px';
@@ -30,9 +30,9 @@ if ($size == 'l') {
 
 <body class="bg">
     <!-- <p>ロボット登場画面</p> -->
-    <figure style="width:<?= $size_px ?>;top:<?= $x ?>px;left:<?= $y ?>px;transform:rotate(<?= $angle ?>deg)">
+    <figure style="width:<?= $size_px ?>;top:<?= $robo_x ?>px;left:<?= $robo_y ?>px;transform:rotate(<?= $robo_angle ?>deg)">
         <figcaption><?php echo $robo_name; ?></figcaption>
-        <img src="img/<?php echo $color; ?>.png" alt="">
+        <img src="img/<?php echo $robo_color; ?>.png" alt="">
     </figure>
     <a href="robot.html" class="back">戻る</a>
 </body>
