@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_title {
+    text-align: center;
+}
+
+.main_title img {
+    width: 30%;
+    min-width: 320px;
+}
+
+form {
+    text-align: center;
+}
+
+form input {
+    padding: 8px;
+    margin-bottom: 30px;
+}
+
+form button {
+    border: none;
+    background-color: #f98;
+    width: 200px;
+    height: 60px;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: 0.5;
+}
+
+.result_title {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.result_img {
+    display: block;
+    width: 90%;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
