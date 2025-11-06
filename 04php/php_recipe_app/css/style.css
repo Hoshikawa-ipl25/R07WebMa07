@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body {
+    background-color: #fef0fe;
+}
+
+input {
+    margin-bottom: 8px;
+}
+
+input[type="submit"] {
+    margin-top: 12px;
+}
