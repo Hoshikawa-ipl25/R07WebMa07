@@ -1,6 +1,9 @@
 <!-- 共通のHTML部分は外部読み込み -->
 <?php require 'header.php'; ?>
 
+<h1>レシピの一覧</h1>
+<a href="form.html">レシピの新規登録</a>
+
 <?php
 
 $user = 'db1_user'; // 後のプログラムでDBユーザーの情報を使いまわしたいので、変数に入れておく

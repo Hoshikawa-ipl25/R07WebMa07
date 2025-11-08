@@ -2,6 +2,9 @@
 
 body {
     background-color: #fef0fe;
+    margin-top: 32px;
+    margin-left: 32px;
+    line-height: 1.7;
 }
 
 input {
@@ -10,4 +13,18 @@ input {
 
 input[type="submit"] {
     margin-top: 12px;
+}
+
+table {
+    margin-top: 24px;
+}
+
+th,
+td {
+    padding-right: 32px;
+}
+
+.totop {
+    display: block;
+    margin-top: 16px;
 }
