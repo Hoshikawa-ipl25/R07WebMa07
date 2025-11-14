@@ -58,21 +58,41 @@
       <div class="section_body">
         <div class="cardList cardList-1row">
 
-          <!-- 記事のループ -->
+          <!-- 投稿のループ -->
           <?php while (have_posts()): the_post(); ?>
-            <section class="cardList_item">
-              <a href="#" class="card">
-                <div class="card_label"><span class="label label-black">お知らせ</span></div>
+            <section id="post-<?php the_ID(); ?>" <?php post_class('cardList_item') ?>>
+              <a href="<?php the_permalink(); ?>" class="card">
+                <!-- <div class="card_label"><span class="label label-black">お知らせ</span></div> -->
+                <?php
+                $categories = get_the_category();
+                if ($categories):
+                ?>
+                  <div class="card_label">
+                    <?php foreach ($categories as $category): ?>
+                      <span class="label label-black"><?php echo $category->name; ?></span>
+                    <?php endforeach; ?>
+                  </div>
+                <?php endif; ?>
+
                 <div class="card_pic">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img01@2x.png" alt="">
+
+                  <!-- サムネイル画像表示 -->
+                  <?php if (has_post_thumbnail()): ?>
+                    <?php the_post_thumbnail('medium'); ?>
+                  <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage.png" alt="">
+                  <?php endif; ?>
+                  <!-- サムネイルここまで -->
+
                 </div>
                 <div class="card_body">
-                  <h2 class="card_title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</h2>
-                  <time datetime="2022-01-25">2022年01月25日更新</time>
+                  <h2 class="card_title"><?php the_title(); ?></h2>
+                  <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日') ?>更新</time>
                 </div>
               </a>
             </section>
           <?php endwhile; ?>
+          <!-- 投稿のループ　ここまで -->
 
         </div>
       </div>
@@ -134,4 +154,4 @@
     </div>
   </div>
 </section>
-<?php get_footer() ?>
+<?php get_footer(); ?>
