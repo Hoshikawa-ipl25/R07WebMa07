@@ -1,0 +1,144 @@
+/**** reset.css ****/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/**** 変数設定 ****/
+:root {
+    --main-width: 450px; /* 真ん中のコンテンツの幅 */
+}
+
+/**** ページ全体 ****/
+body {
+    background-color: orange;
+    box-sizing: border-box;
+    color: #333333;
+    background-attachment: fixed;
+    z-index: 1;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/**** PC画面時 左サイド部分 ****/
+.side_l {
+    background-color: #2dc52d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc((100% - var(--main-width)) / 2);
+    height: 100%;
+}
+
+/**** 左サイド部分のロゴ画像 ****/
+.side_l .logo {
+    display: block;
+    width: calc(100% / 2);
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/**** PC画面時 右サイド部分 ****/
+.side_r {
+    background-color: #2887ad;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc((100% - var(--main-width)) / 2);
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_wrapper .nav_list li {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+.nav_wrapper .nav_list li a {
+    display: inline-block;
+    font-weight: 700;
+    color: #000;
+    padding: 4px 40px;
+}
+
+.nav_wrapper .nav_list li a:hover {
+    color: #ff7300;
+}
+
+/**** 画面幅1000以下になると、左サイドの中のリストは消えます ****/
+@media screen and (max-width: 1000px) {
+    .nav_wrapper {
+        display: none;
+    }
+}
+
+/**** PC画面時 真ん中パーツ（メインコンテンツが入るスペース） ****/
+.container {
+    max-width: var(--main-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+/**** 768px以下（タブレットサイズ以下）になると、この部分が画面いっぱいになる ****/
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: none;
+        width: 100%;
+    }
+    /* ↓真ん中部分が画面いっぱいになったら、左と右サイドは見えなくする
+    （書かなくても真ん中が画面いっぱいになるので外においやられて見えなくなりますが） */
+    .side_l,
+    .side_r {
+        display: none;
+    }
+}
+
+/**** 真ん中のコンテンツ内のCSS ****/
+header {
+    background-color: #bfe082;
+    padding: 20px;
+}
+
+.section {
+    padding: 20px;
+    height: 1000px;
+}
+
+#sec01 {
+    background-color: #fedf48;
+    color: #fff;
+}
+
+#sec02 {
+    background-color: #ff7300;
+    color: #fff;
+}
+
+#sec03 {
+    background-color: #f0e68c;
+    color: #fff;
+}
+
+#sec04 {
+    background-color: #ffda09;
+    color: #fff;
+}
+
+footer {
+    padding: 20px;
+}
