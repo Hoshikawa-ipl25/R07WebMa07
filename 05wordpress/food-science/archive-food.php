@@ -23,7 +23,7 @@
         </ul>
       </section>
 
-      <section class="section_body">
+      <!-- <section class="section_body">
         <h3 class="heading heading-secondary">ドリンク<span>DRINK</span></h3>
         <ul class="foodList">
           <li class="foodList_item">
@@ -70,6 +70,6 @@
         </ul>
       </section>
     </div>
-  </section>
+  </section> -->
 </main>
 <?php get_footer(); ?>
